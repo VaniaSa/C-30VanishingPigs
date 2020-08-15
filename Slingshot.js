@@ -13,8 +13,14 @@ class SlingShot{
         this.sling = Constraint.create(options);
         World.add(world, this.sling);
     }
-
+    attach(body)
+    {
+       //to attach the bird to the slingshot
+        this.sling.bodyA=body;
+    }
+    
     fly(){
+        //attaching the sling to null to free the bird
         this.sling.bodyA = null;
     }
 
